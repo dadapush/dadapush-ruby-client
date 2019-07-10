@@ -19,7 +19,7 @@ require 'DaDaPushClient'
 instance = DaDaPushClient::MessageObject.new(actions: null,
                                  channel_name: channelName,
                                  content: DaDaPush v1.0.0 releasing,
-                                 created_at: 2019-07-01 12:45:30,
+                                 created_at: 2015-07-25T23:09:01.795+0700,
                                  id: 123,
                                  title: Good News!)
 ```
