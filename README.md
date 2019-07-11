@@ -38,9 +38,9 @@ Finally add this to the Gemfile:
 
 ### Install from Git
 
-If the Ruby gem is hosted at a git repository: https://github.com/GIT_USER_ID/GIT_REPO_ID, then add the following in the Gemfile:
+If the Ruby gem is hosted at a git repository: https://github.com/dadapush/dadapush-ruby-client, then add the following in the Gemfile:
 
-    gem 'dadapush_client', :git => 'https://github.com/GIT_USER_ID/GIT_REPO_ID.git'
+    gem 'dadapush_client', :git => 'https://github.com/dadapush/dadapush-ruby-client.git'
 
 ### Include the Ruby code directly
 
@@ -97,9 +97,4 @@ Class | Method | HTTP request | Description
  - [DaDaPushClient::ResultOfMessageObject](docs/ResultOfMessageObject.md)
  - [DaDaPushClient::ResultOfMessagePushResponse](docs/ResultOfMessagePushResponse.md)
  - [DaDaPushClient::ResultOfPageResponseOfMessageObject](docs/ResultOfPageResponseOfMessageObject.md)
-
-
-## Documentation for Authorization
-
- All endpoints do not require authorization.
 
