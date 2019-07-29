@@ -19,7 +19,12 @@ require 'json'
 describe 'DaDaPushMessageApi' do
   before do
     # run before each test
-    @api_instance = DaDaPushClient::DaDaPushMessageApi.new
+    config = DaDaPushClient::Configuration.new
+    config.scheme = "http"
+    config.host = "127.0.0.1:8080"
+    # @config = Configuration.new()
+    api_client = DaDaPushClient::ApiClient.new(@config = config)
+    @api_instance = DaDaPushClient::DaDaPushMessageApi.new(@api_client = api_client)
   end
 
   after do
@@ -42,6 +47,17 @@ describe 'DaDaPushMessageApi' do
   describe 'create_message test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      body = DaDaPushClient::MessagePushRequest.new
+      body.title = "Good News!"
+      body.content = "Good News! DaDaPush releasing new version"
+      body.need_push = TRUE
+      action = DaDaPushClient::Action.new({"name": "view", "url": "https://www.dadapush.com/", "type": "link"})
+      body.actions = [action]
+      opts = {
+          x_channel_token: 'ctb3lwO6AeiZOwqZgp8BE8980FdNgp0cp6MCf'
+      }
+      response = @api_instance.create_message(body, opts)
+      puts response
     end
   end
 
@@ -55,6 +71,12 @@ describe 'DaDaPushMessageApi' do
   describe 'delete_message test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      opts = {
+          x_channel_token: 'ctb3lwO6AeiZOwqZgp8BE8980FdNgp0cp6MCf'
+      }
+      message_id = 227847
+      response = @api_instance.delete_message(message_id, opts)
+      puts response
     end
   end
 
@@ -68,6 +90,12 @@ describe 'DaDaPushMessageApi' do
   describe 'get_message test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      opts = {
+          x_channel_token: 'ctb3lwO6AeiZOwqZgp8BE8980FdNgp0cp6MCf'
+      }
+      message_id = 227847
+      response = @api_instance.get_message(message_id, opts)
+      puts response
     end
   end
 
@@ -82,6 +110,13 @@ describe 'DaDaPushMessageApi' do
   describe 'get_messages test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      opts = {
+          x_channel_token: 'ctb3lwO6AeiZOwqZgp8BE8980FdNgp0cp6MCf'
+      }
+      page = 1
+      page_size = 10
+      response = @api_instance.get_messages(page, page_size, opts)
+      puts response
     end
   end
 

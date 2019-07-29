@@ -28,7 +28,7 @@ require 'dadapush_client/models/result_of_message_push_response'
 require 'dadapush_client/models/result_of_page_response_of_message_object'
 
 # APIs
-require 'dadapush_client/api/da_da_push_message_api'
+require 'dadapush_client/api/dadapush_message_api'
 
 module DaDaPushClient
   class << self
