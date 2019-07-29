@@ -11,5 +11,5 @@ OpenAPI Generator version: 4.0.2
 =end
 
 module DaDaPushClient
-  VERSION = '1.0.0'
+  VERSION = '1.0.1'
 end
