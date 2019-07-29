@@ -23,8 +23,8 @@ Gem::Specification.new do |s|
   s.email       = ["contacts@dadapush.com"]
   s.homepage    = "https://www.dadapush.com"
   s.summary     = "DaDaPush Client For Ruby"
-  s.description = "DaDaPush: Real-time Notifications App Send real-time notifications through our API without coding and maintaining your own app for iOS or Android devices."
-  s.license     = 'Apache 2.0'
+  s.description = "DaDaPush: Real-time Notifications App\nSend real-time notifications through our API without coding and maintaining your own app for iOS or Android devices."
+  s.license     = 'Apache-2.0'
   s.required_ruby_version = ">= 1.9"
 
   s.add_runtime_dependency 'typhoeus', '~> 1.0', '>= 1.0.1'
